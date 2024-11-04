@@ -1,0 +1,51 @@
+#include <stdio.h>
+
+void imprimiMenu(){
+    printf("Aperte 0 para sair do loop\n");
+    printf("Aperte 1 para ligar para a polícia\n");
+    printf("Aperte 2 para ligar para os bombeiros\n");
+    printf("Aperte 3 para ligar para o SAMU\n");
+    return;
+}
+
+void imprimiOpcao1(){
+    printf("Ligando para a polícia\n");
+    printf("Aperte 0 para finalizar ligação\n");
+}
+
+void imprimiOpcao2(){
+    printf("Ligando para os bombeiros \n");
+    printf("Aperte 0 para finalizar ligação\n");
+}
+
+void imprimiOpcao3(){
+    printf("Ligando para ligar para o SAMU\n");
+    printf("Aperte 0 para finalizar ligação\n");
+}
+
+int main()
+{
+    int opcao = -1;
+    int opcao2 = -1;
+    while(opcao!=0){
+        imprimiMenu();
+        scanf("%d", &opcao);
+    if(opcao == 1){
+        imprimiOpcao1();
+        scanf("%d", &opcao2);
+    }
+    else if(opcao == 2){
+        imprimiOpcao2();
+        scanf("%d", &opcao2);
+    }
+    else if(opcao == 3){
+        imprimiOpcao3();
+        scanf("%d", &opcao2);
+    }
+    else{
+        scanf("%d",&opcao);
+    }
+        
+    }
+    return 0;
+}
